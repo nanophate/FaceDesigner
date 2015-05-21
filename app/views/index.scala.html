@@ -1,11 +1,9 @@
 @(message: String)
-@scripts = {
-  <script type="text/javascript">alert("sample message");</script> <!--Method for javascirpt to be read by the browser-->
-}
+<!--@(scripts: String)-->
 
 @main("Welcome to FaceDesigner") {
 
-    @play20.welcome(message, scripts)<!--display in the html-->
+    @play20.welcome(message)<!--display in the html-->
     
 
 }
