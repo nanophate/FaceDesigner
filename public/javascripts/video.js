@@ -12,8 +12,8 @@ if (window.console) {
 
   // Put variables in global scope to make them available to the browser console.
   var canvas = window.canvas = document.querySelector('canvas');
-  canvas.width = 480;
-  canvas.height = 360;
+  //canvas.width = 480;
+  //canvas.height = 360;
 
   var button = document.querySelector('button');
   button.onclick = function() {
