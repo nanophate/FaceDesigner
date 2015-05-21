@@ -1,6 +1,3 @@
-if (window.console) {
-  console.log();
-}
 /*
  *  Copyright (c) 2014 The WebRTC project authors. All Rights Reserved.
  *
@@ -9,40 +6,29 @@ if (window.console) {
  *  tree.
  */
 
-  'use strict';
+'use strict';
 
-  // Put variables in global scope to make them available to the browser console.
-  var canvas = window.canvas = document.querySelector('canvas');
-  //canvas.width = 480;
-  //canvas.height = 360;
+// variables in global scope so available to console
+var video = document.querySelector('video');
+var constraints = {
+  audio: false,
+  video: true
+};
 
-  var button = document.querySelector('button');
-  button.onclick = function() {
-    canvas.getContext('2d').
-      drawImage(video, 0, 0, canvas.width, canvas.height);
-  };
+navigator.getUserMedia = navigator.getUserMedia ||
+    navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
-  var video = document.querySelector('video');
-
-  navigator.getUserMedia = navigator.getUserMedia ||
-      navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-
-  var constraints = {
-    audio: false,
-    video: true
-  };
-
-  function successCallback(stream) {
-    window.stream = stream; // make stream available to browser console
-    if (window.URL) {
-      video.src = window.URL.createObjectURL(stream);
-    } else {
-      video.src = stream;
-    }
+function successCallback(stream) {
+  window.stream = stream; // stream available to console
+  if (window.URL) {
+    video.src = window.URL.createObjectURL(stream);
+  } else {
+    video.src = stream;
   }
+}
 
-  function errorCallback(error) {
-    console.log('navigator.getUserMedia error: ', error);
-  }
+function errorCallback(error) {
+  console.log('navigator.getUserMedia error: ', error);
+}
 
-  navigator.getUserMedia(constraints, successCallback, errorCallback);
+navigator.getUserMedia(constraints, successCallback, errorCallback);
