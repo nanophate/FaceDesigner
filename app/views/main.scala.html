@@ -8,6 +8,7 @@
         <link rel="stylesheet" media="screen" href='@routes.Assets.at("stylesheets/main.css")'>
         <link rel="shortcut icon" type="image/png" href='@routes.Assets.at("images/favicon.png")'>
         <script type="text/javascript" src='@routes.Assets.at("javascripts/video.js")'></script>
+        <script type="text/javascript" src='@routes.Assets.at("javascripts/yasu.js")'></script>
         @import controllers.routes.javascript._
         @scripts
     </head>
@@ -15,13 +16,6 @@
       <div id="container">
         @content
         <video id="gum-local" autoplay></video>
-        <script>
-  var video = document.getElementById('sourcevid');
-  navigator.getUserMedia({audio: true, video: true}, success, error);
-  function success(stream) {
-      video.src = window.URL.createObjectURL(stream);
-  }
-</script>
       </div>
     </body>
 </html>
