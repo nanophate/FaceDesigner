@@ -23,15 +23,15 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 //capture the video and snap invervaly then send the data using websocket to the server
 timer = setInterval(  
       function () {
-        //cheating to get t the jq method done
+        //cheating to get the jq method done
         $(function() {
-        var ctx = canvas.get(0)[0].getContext('2d');  //d.graph similar thing
-        ctx.drawImage(video, 0, 0, 320, 240);
-        var data = canvas.get()[0].toDataURL('image/jpeg', 1.0);
-        newblob = dataURItoBlob(data);
-        ws.send(newblob);
+          var ctx = canvas.get(0)[0].getContext('2d');  //d.graph similar thing
+          ctx.drawImage(video, 0, 0, 320, 240);
+          var data = canvas.get()[0].toDataURL('image/jpeg', 1.0);
+          newblob = dataURItoBlob(data);
+          ws.send(newblob);
+        })
       }, 250);
-      }
 
 
 
