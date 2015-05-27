@@ -1,7 +1,6 @@
 video = document.querySelector('video');  //look for tags indicated video
 //var canvas = document.querySelector('canvas')
 var canvas = $("#snap-source");  //jQuery get method
-var ctx = canvas.get(0)[0].getContext('2d');  //d.graph similar thing
 var constraints = {  //limit data going
   audio: false,
   video: true
@@ -24,6 +23,7 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 //capture the video and snap invervaly then send the data using websocket to the server
 timer = setInterval(  
       function () {
+        var ctx = canvas.get(0)[0].getContext('2d');  //d.graph similar thing
         ctx.drawImage(video, 0, 0, 320, 240);
         var data = canvas.get()[0].toDataURL('image/jpeg', 1.0);
         newblob = dataURItoBlob(data);
