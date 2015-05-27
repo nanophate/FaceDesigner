@@ -7,7 +7,7 @@ var constraints = {
       function successCallback(stream) {
         video.src = webkitURL.createObjectURL(stream);
       }
-      function errorCallbac(error) {
+      function errorCallback(error) {
         console.log("Unable to get video stream!")
       }
 navigator.getUserMedia(constraints, successCallback, errorCallback);
