@@ -5,6 +5,26 @@ var constraints = {  //limit data going
   audio: false,
   video: true
 };
+//i love Stoive !! *1 copy and paste from stack over flow
+function dataURItoBlob(dataURI) {
+    // convert base64/URLEncoded data component to raw binary data held in a string
+    var byteString;
+    if (dataURI.split(',')[0].indexOf('base64') >= 0)
+        byteString = atob(dataURI.split(',')[1]);
+    else
+        byteString = unescape(dataURI.split(',')[1]);
+
+    // separate out the mime component
+    var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+
+    // write the bytes of the string to a typed array
+    var ia = new Uint8Array(byteString.length);
+    for (var i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+    }
+
+    return new Blob([ia], {type:mimeString});
+}
 //preparing web socket
 var ws = new WebSocket("ws://face-designer.herokuapp.com:8080"); //ref to qiitq 3*
   ws.onopen = function () {
@@ -13,7 +33,7 @@ var ws = new WebSocket("ws://face-designer.herokuapp.com:8080"); //ref to qiitq 
 //preparing to turn the camera media on
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;  //Multiple web broser support
       function successCallback(stream) {
-        video.src = URL.createObjectURL(stream);  //get thing the src"http://asskao0-..."
+        video.src = URL.createObjectURL(stream);  //get things like src"http://asskao0-..."
       }
       function errorCallback(error) {
         console.log("Unable to get video stream!")
