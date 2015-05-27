@@ -1,6 +1,6 @@
 video = document.querySelector('video');  //look for tags indicated video
 //var canvas = document.querySelector('canvas')
-var canvas = $("#canvas");
+var canvas = $("#snap-source");  //jQuery get method
 var ctx = canvas.get(0)[0].getContext('2d');  //d.graph similar thing
 var constraints = {  //limit data going
   audio: false,
