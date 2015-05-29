@@ -12,7 +12,7 @@ import views.html.*;
 public class Application extends Controller {
 
     public static Result index() {
-        return ok(index.render());
+        return ok(index.render("tdds"));
     }
     public static Result videoJs(){
         return ok(views.js.video.render());
