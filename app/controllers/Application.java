@@ -12,7 +12,7 @@ import views.html.*;
 public class Application extends Controller {
 
     public static Result index() {
-        return ok(index.render("tdds"));
+        return ok(index.render("Welcome to FaceDesigner"));
     }
     public static Result videoJs(){
         return ok(views.js.video.render());
