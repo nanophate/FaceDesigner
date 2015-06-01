@@ -26,8 +26,7 @@ function dataURItoBlob(dataURI) {
     return new Blob([ia], {type:mimeString});
 }
 //preparing web socket
-var WSS =  window['MozWebSocket'] ? MozWebSocket : WebSocket;
-var ws = new WSS("@routes.Application.videoJs().webSocketURL(request)"); //ref to qiitq 3*
+var ws = new WebSocket("ws://face-designer.herokuapp.com:8080"); //ref to qiitq 3*
   ws.onopen = function () {
   console.log("Openened connection to websocket");
   }
@@ -37,7 +36,7 @@ var ws = new WSS("@routes.Application.videoJs().webSocketURL(request)"); //ref t
         video.src = URL.createObjectURL(stream);  //get things like src"http://asskao0-..."
       }
       function errorCallback(error) {
-        console.log("Unable to get video stream!")
+        console.log("Unable to get video stream!");
       }
 //main thats doing the function and calling parms
 navigator.getUserMedia(constraints, successCallback, errorCallback);  
@@ -49,9 +48,9 @@ timer = setInterval(
           var ctx = canvas.get()[0].getContext('2d');  //d.graph similar thing
           ctx.drawImage(video, 0, 0, 320, 240);
           var data = canvas.get()[0].toDataURL('image/jpeg', 1.0);
-          newblob = dataURItoBlob(data); //1*
+          newblob = dataURItoBlob(data); 
           ws.send(newblob);
-        })
+        });
       }, 250);
 // 1* http://stackoverflow.com/questions/4998908/convert-data-uri-to-file-then-append-to-formdata/5100158
 // 2* http://stackoverflow.com/questions/10291693/cannot-read-property-getcontext-of-null-using-canvas
