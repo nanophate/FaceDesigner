@@ -32,4 +32,4 @@ public class Application extends Controller {
 }
 
 //https://devcenter.heroku.com/articles/play-java-websockets
-//https://www.playframework.com/documentation/2.2.x/JavaWebSockets
+//https://www.playframework.com/documentation/2.2.x/Java-WebSockets
