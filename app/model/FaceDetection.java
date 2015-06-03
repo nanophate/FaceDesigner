@@ -1,13 +1,10 @@
 package javacv
  
-import com.googlecode.javacv.cpp.opencv_core._
-import com.googlecode.javacv.cpp.opencv_imgproc._
-import com.googlecode.javacv.cpp.opencv_highgui._
-import com.googlecode.javacv.cpp.opencv_objdetect._
-import com.googlecode.javacpp.BytePointer
-import java.nio.ByteBuffer
-import javax.imageio.ImageIO
-import java.io.ByteArrayOutputStream
+import com.googlecode.javacv.cpp.*;
+import com.googlecode.javacpp.BytePointer;
+import java.nio.ByteBuffer;
+import javax.imageio.ImageIO;
+import java.io.ByteArrayOutputStream;
   
 public class FaceDetection {
  
