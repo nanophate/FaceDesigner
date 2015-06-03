@@ -7,4 +7,4 @@ GET     /                            controllers.Application.index()
 # Map static resources from the /public folder to the /assets URL path
 #GET     /assets/*file                controllers.Assets.at(path="/public", file)
 # GET   /javascriptRoutes            controllers.Application.javascriptRoutes
-GET     /assets/javascripts/video.js controllers.Views.videoJs()
+GET     /assets/javascripts/video.js views.video.videoJs()
