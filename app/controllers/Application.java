@@ -5,6 +5,7 @@ import play.mvc.*;
 import java.lang.String;
 import play.mvc.Result;
 import play.mvc.WebSocket;
+import model.FaceDetection;
 
 import views.html.*;
 
