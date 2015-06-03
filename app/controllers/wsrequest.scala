@@ -19,3 +19,4 @@ object wsrequest extends Controller {
   // tie the in and out values to each other
   (in, out)
 }
+}
