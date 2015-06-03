@@ -26,7 +26,7 @@ function dataURItoBlob(dataURI) {
     return new Blob([ia], {type:mimeString});
 }
 //preparing web socket
-var ws = new WebSocket("ws://face-designer.herokuapp.com:8080"); //ref to qiitq 3*
+var ws = new WebSocket("@routes.Application"); //ref to qiitq 3*
   ws.onopen = function () {
   console.log("Openened connection to websocket");
   }

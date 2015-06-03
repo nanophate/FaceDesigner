@@ -1,8 +1,9 @@
 package javacv;
  
 import java.nio.ByteBuffer;
-import javax.imageio.ImageIO;
-import java.io.ByteArrayOutputStream;
+import javax.imageio.*;
+import java.io.*;
+
   
 public class FaceDetection {
  
