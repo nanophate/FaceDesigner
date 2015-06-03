@@ -30,5 +30,3 @@ public class Application extends Controller {
     (in, out)
   }
 }
-
-//https://devcenter.heroku.com/articles/play-java-websockets;
