@@ -27,7 +27,8 @@ function dataURItoBlob(dataURI) {
 }
 //preparing web socket
 var WSS =  window['MozWebSocket'] || ['MozWebSocket'] || ['WebSocket'];
-var ws = new WSS("@routes.Application.videoJs().webSocketURL(request)"); //ref to qiitq 3*  ws.onopen = function () {
+var ws = new WSS("@routes.Application.videoJs()"); //ref to qiitq 3*  
+ws.onopen = function () {
   console.log("Openened connection to websocket");
   }
 //preparing to turn the camera media on
