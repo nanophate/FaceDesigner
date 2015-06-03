@@ -8,6 +8,7 @@ import play.mvc.WebSocket;
 
 
 import views.html.*;
+import controllers.scala.*;
 
 public class Application extends Controller {
 
@@ -17,16 +18,4 @@ public class Application extends Controller {
   public static Result videoJs(){
         return ok(views.js.video.render());
     }
-    def websocket = WebSocket.using[String] { request => 
-
-    // Log events to the console
-    val in = Iteratee.foreach[String](println).mapDone { _ =>
-      println("Disconnected")
-    }
-
-    // Send a single 'Hello!' message
-    val out = Enumerator("Hello!")
-
-    (in, out)
-  }
 }
