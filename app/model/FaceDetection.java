@@ -1,7 +1,5 @@
 package javacv;
  
-import com.googlecode.javacv.cpp.*;
-import com.googlecode.javacpp.BytePointer;
 import java.nio.ByteBuffer;
 import javax.imageio.ImageIO;
 import java.io.ByteArrayOutputStream;
