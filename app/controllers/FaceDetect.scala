@@ -19,24 +19,18 @@ object FaceDetect {
  
   def detect(imageData:Array[Byte]) : Array[Byte] = {
  
-    // we need to wrap the input array, since BytePointer doesn't accept
-    // a bytearray as input. It accepts a byte varargs, but Array[Byte]
-    // doesn't convert automatically
+
     var wrappedData = ByteBuffer.wrap(imageData);
     var originalImage = cvDecodeImage(cvMat(1, imageData.length,CV_8UC1, new BytePointer(wrappedData)));
  
-    // convert to grayscale for easy detection
     var grayImage = IplImage.create(originalImage.width(), originalImage.height(), IPL_DEPTH_8U, 1);
     cvCvtColor(originalImage, grayImage, CV_BGR2GRAY);
  
-    // storage is needed to store information during detection
 	var storage = CvMemStorage.create();
  
-	// load and run the cascade
 	var cascade = new CvHaarClassifierCascade(cvLoad(CASCADE_FILE));
 	var faces = cvHaarDetectObjects(grayImage, cascade, storage, scale, group, minsize);
  
-	// draw a rectangle for the detected faces
 	for (i <- 0 until faces.total) {
 	  var r = new CvRect(cvGetSeqElem(faces, i));
 	  cvRectangle(originalImage, cvPoint(r.x, r.y),
@@ -44,7 +38,6 @@ object FaceDetect {
 					CvScalar.YELLOW, 1, CV_AA, 0);
 	}
  
-	// convert to bytearray and return
 	var bout = new ByteArrayOutputStream();
 	var imgb = originalImage.getBufferedImage();
 	ImageIO.write(imgb, "png", bout);
