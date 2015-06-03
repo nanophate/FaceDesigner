@@ -51,7 +51,7 @@ timer = setInterval(
           newblob = dataURItoBlob(data); 
           ws.send(newblob);
         });
-      }, 250);
+      }, 850);
 // 1* http://stackoverflow.com/questions/4998908/convert-data-uri-to-file-then-append-to-formdata/5100158
 // 2* http://stackoverflow.com/questions/10291693/cannot-read-property-getcontext-of-null-using-canvas
 // 3* http://qiita.com/yyyske/items/0d00e5e352b7078a501e
