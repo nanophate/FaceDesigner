@@ -26,7 +26,7 @@ function dataURItoBlob(dataURI) {
     return new Blob([ia], {type:mimeString});
 }
 //preparing web socket
-var WSS =  window['MozWebSocket'] ? MozWebSocket : WebSocket;
+var WSS =  window['MozWebSocket'] || ['MozWebSocket'] || ['WebSocket'];
 var ws = new WSS("@routes.Application.videoJs().webSocketURL(request)"); //ref to qiitq 3*  ws.onopen = function () {
   console.log("Openened connection to websocket");
   }
