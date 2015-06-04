@@ -12,5 +12,5 @@ libraryDependencies ++= Seq(
   cache,
   javaWs
   )
-libraryDepedencies += "com.googlecode.javacv" % "javacv" 
-libraryDepedencies += "com.googlecode.javacpp" % "javacpp" 
+libraryDepedencies += "com.googlecode.javacv" % "javacv" % "0.11"
+libraryDepedencies += "com.googlecode.javacpp" % "javacpp" % "0.11"
