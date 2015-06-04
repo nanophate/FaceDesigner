@@ -12,4 +12,5 @@ libraryDependencies ++= Seq(
   cache,
   javaWs
   )
-  libraryDependencies += "org.bytedeco" % "javacv" % "0.8"
+  libraryDependencies += "org.bytedeco" % "javacv" % "0.11"
+  libraryDependencies += "org.bytedeco" % "javacpp" % "0.11"
