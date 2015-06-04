@@ -12,7 +12,7 @@ libraryDependencies ++= Seq(
   cache,
   javaWs
 )
-val appDependencies = Seq(
+val javacv = Seq(
       "javacv" % "javacv" % "2.3.1",
       "javacv" % "javacpp" % "2.3.1",
       "javacv" % "javacv-macosx-x86_64" % "2.3.1"
