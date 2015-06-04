@@ -1,5 +1,6 @@
 package javacv
- 
+package com.googlecode.javacv.cpp
+
 import com.googlecode.javacv.cpp.opencv_core._
 import com.googlecode.javacv.cpp.opencv_imgproc._
 import com.googlecode.javacv.cpp.opencv_highgui._
