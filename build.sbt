@@ -10,6 +10,7 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache,
-  javaWs
+  javaWs,
+  sbt.Resolver
 )
 resolvers := "javacv maven repo" at "http://maven2.javacv.googlecode.com/git/"librarydepedencies = "com.googlecode.javacv" % "javacv" % "0.2"
