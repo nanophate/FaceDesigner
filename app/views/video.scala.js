@@ -27,7 +27,7 @@ function dataURItoBlob(dataURI) {
 }
 //preparing web socket
 var WSS =  window['MozWebSocket'] || ['MozWebSocket'] || ['WebSocket'];
-var ws = new WSS("@routes.Application.wsrequest"); //ref to qiitq 3*  
+var ws = new WSS("@routes.wsrequest.wsRequest"); //ref to qiitq 3*  
 ws.onopen = function () {
   console.log("Openened connection to websocket");
   }
