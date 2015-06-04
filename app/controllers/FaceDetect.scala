@@ -1,4 +1,4 @@
-package com.googlecode
+package javacv
 
 import com.googlecode.javacv.cpp.opencv_core._
 import com.googlecode.javacv.cpp.opencv_imgproc._
