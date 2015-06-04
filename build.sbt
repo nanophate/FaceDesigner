@@ -12,8 +12,4 @@ libraryDependencies ++= Seq(
   cache,
   javaWs
 )
-val javacv = Seq(
-      "javacv" % "javacv" % "2.3.1",
-      "javacv" % "javacpp" % "2.3.1",
-      "javacv" % "javacv-macosx-x86_64" % "2.3.1"
-    )
+resolvers = "javacv maven repo" at "http://maven2.javacv.googlecode.com/git/"librarydepedencies = "com.googlecode.javacv" % "javacv" % "0.2"
