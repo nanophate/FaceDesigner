@@ -1,4 +1,4 @@
-package com.googlecode.javacv._
+package com.googlecode.javacv.cpp._
 package com.googlecode.javacpp._
 
 
@@ -15,7 +15,7 @@ import scala.tools.nsc.io.VirtualFile
 object FaceDetect {
  
 	var CASCADE_FILE =PATH_TO_CASCADE_FILE;
-  	var minsize = 20;
+  var minsize = 20;
 	var group = 0;
 	var scale = 1.1;
  
