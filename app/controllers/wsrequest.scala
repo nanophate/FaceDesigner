@@ -7,7 +7,7 @@ import play.api.libs.iteratee._
 
 object wsrequest extends Controller {
 
-  def wsrequest = WebSocket.using[Array[Byte]] { request =>
+  def wsRequest = WebSocket.using[Array[Byte]] { request =>
  
   // Create the outbound value that is called for each
   val out = Enumerator.imperative[Array[Byte]]();
