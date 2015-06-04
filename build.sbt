@@ -10,6 +10,10 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache,
-  javaWs,
-  javacv
+  javaWs
 )
+val appDependencies = Seq(
+      "javacv" % "javacv" % "2.3.1",
+      "javacv" % "javacpp" % "2.3.1",
+      "javacv" % "javacv-macosx-x86_64" % "2.3.1"
+    )
