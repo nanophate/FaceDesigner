@@ -1,4 +1,5 @@
 package javacv
+package javacpp
 
 import javacv.cpp.opencv_core._
 import javacv.cpp.opencv_imgproc._
