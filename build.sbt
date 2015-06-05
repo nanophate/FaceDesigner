@@ -11,6 +11,6 @@ libraryDependencies ++= Seq(
   javaEbean,
   cache,
   javaWs,
-  "com.googlecode.javacv" % "javacv" % "0.11",
-  "com.googlecode.javacpp" % "javacpp" % "0.11"
+  "com.googlecode.javacv" % "javacv" % "0.2",
+  "com.googlecode.javacpp" % "javacpp" % "0.2"
   )
