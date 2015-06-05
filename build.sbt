@@ -11,12 +11,11 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache,
-  javaWs,
-  "org.bytedeco"                 % "javacpp"         % javacppVersion,
-  "org.bytedeco"                 % "javacv"          % javacppVersion,
-  "org.bytedeco.javacpp-presets" % "opencv" % ("2.4.11-" + javacppVersion) classifier "",
-  "org.bytedeco.javacpp-presets" % "opencv" % ("2.4.11-" + javacppVersion) classifier platform,
-  "org.scala-lang.modules"      %% "scala-swing"     % "1.0.1",
-  "junit"                        % "junit"           % "4.12" % "test",
-  "com.novocode"                 % "junit-interface" % "0.11" % "test"
+  javaWs
   )
+  val javacv = 
+  "com.googlecode.javacv" % 
+  "javacv" % 
+  "0.7" classifier "linux-x86_64" classifier "macosx-x86_64" classifier ""
+ 
+libraryDependencies += javacv
