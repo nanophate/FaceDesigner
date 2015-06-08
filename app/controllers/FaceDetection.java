@@ -19,7 +19,7 @@ public class FaceDetection {
  
 	/**
 	 * Based on FaceDetection example from JavaCV.
-	 */
+	
 	public byte[] convert(byte[] imageData) throws IOException {
 		// create image from supplied bytearray
 		IplImage originalImage = cvDecodeImage(cvMat(1, imageData.length,CV_8UC1, new BytePointer(imageData)));
