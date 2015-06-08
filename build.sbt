@@ -16,6 +16,6 @@ libraryDependencies ++= Seq(
   val javacv = 
   "com.googlecode.javacv" % 
   "javacv" % 
-  "0.7" classifier "linux-x86_64" classifier "macosx-x86_64" classifier ""
+  "0.2" classifier "linux-x86_64" classifier "macosx-x86_64" classifier ""
  
 libraryDependencies += javacv
