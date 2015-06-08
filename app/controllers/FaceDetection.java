@@ -1,4 +1,4 @@
-package javacv;
+/*package javacv;
  
 import com.googlecode.javacv.cpp.opencv_core.*;
 import com.googlecode.javacv.cpp.opencv_imgproc.*;
@@ -51,4 +51,4 @@ public class FaceDetection {
 		ImageIO.write(imgb, "png", bout);
 		return bout.toByteArray();
 	}
-}
+}*/

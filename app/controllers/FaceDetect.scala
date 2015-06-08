@@ -1,4 +1,5 @@
-package javacv
+
+/*package javacv
 package javacpp
 
 import javacv.cpp.opencv_core._
@@ -45,4 +46,4 @@ object FaceDetect {
  
     bout.toByteArray()
   }
-}
+}*/
