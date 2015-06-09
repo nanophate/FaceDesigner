@@ -1,4 +1,4 @@
-/*package controllers
+package controllers
 
 import play.api._
 import play.api.mvc._
@@ -19,4 +19,4 @@ object wsrequest extends Controller {
   // tie the in and out values to each other
   (in, out)
 }
-}*/
+}
