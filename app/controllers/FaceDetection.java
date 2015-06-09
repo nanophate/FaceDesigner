@@ -51,4 +51,4 @@ public class FaceDetection {
 		ImageIO.write(imgb, "png", bout);
 		return bout.toByteArray();
 	}
-}*/
+}**/
